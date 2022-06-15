@@ -1,0 +1,39 @@
+#content{
+  overflow: scroll;
+  flex:1;
+  
+  border: 0px solid red;
+}
+
+.top-list-of{
+  display: flex;
+  padding: 12px;
+  margin: 8px;
+  border-radius: 10px;
+  width: auto;;
+  background: #1ed760;
+}
+
+.top-list-of button{
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  margin: 0px 10px;
+  font-family: 'Varela Round', sans-serif;
+  border: none;
+  padding: 4px;
+  flex:0 0 ;
+  display: inline-block;
+}
+
+
+
+.top-list{
+  display: flex;
+  flex: wrap;
+  width: 100%;
+  min-height: 100%;
+  border: 1px solid green;
+}
+
+
+

@@ -1,0 +1,10 @@
+.MainPage{
+  font-family: 'Varela Round', sans-serif;
+  border: 0px dashed red;
+  display: flex;
+  height: 100vh;
+  
+  flex-direction: column;
+}
+
+
