@@ -14,7 +14,7 @@ function spotifyApi(handleOneLoad,apiEndpoint,access_token){
 
 
 
-function getAndSetUserTo(endpoint,setUserTop,access_token){
+function getAndSetUserTop(endpoint,setUserTop,access_token){
     spotifyApi(function(){
       if(this.status === 200){
         setUserTop(JSON.parse(this.responseText));
@@ -22,4 +22,4 @@ function getAndSetUserTo(endpoint,setUserTop,access_token){
     },"https://api.spotify.com/v1/me/top/"+endpoint,access_token);
   }
 
-export { spotifyApi , getRequestEndpoint };
+export { spotifyApi , getAndSetUserTop };

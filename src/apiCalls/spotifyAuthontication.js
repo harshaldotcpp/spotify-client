@@ -24,7 +24,7 @@ function getAccessToken(code){
   //console.log(code)
     let body = "grant_type=authorization_code";
     body += "&code=" + code;
-    body += "&redirect_uri=" + encodeURI("http://localhost:8158/index.html");
+    body += "&redirect_uri=" + encodeURI("http://localhost:7700/index.html");
     body += "&client_id="+client_id;
     body += "&client_secret=" + client_secret;
     callAuthorizationApi(body);
