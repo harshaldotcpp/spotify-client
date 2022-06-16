@@ -1,22 +1,16 @@
 .navbar{
   box-shadow: 0 0 5px rgba(0,0,0,.7);
   position: relative;
-  flex: 0 1 220px;
-  border:0px dashed yellow;
+  flex: 0 1 90px;
 }
 
 .control-panel{
   background: #ffffff;
-  
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border: 0px solid blue;
-  position: relative;
-  left:0px;
-  right: 0px;
-  top: 0px;
-  height: 40%;
+  height: 100%;
   box-shadow: 0px 0px 10px rgba(0,0,0,.7);
 }
 .control-panel h1{
@@ -38,66 +32,3 @@
   flex-shrink: 0;
 }
 
-
-
-.top-section{
-  position: relative;
-   left:0px;
-  right: 0px;
-  bottom: 0px;
-  height: 60%;
-  border-bottom: 1px solid black;
-}
-
-.nav-top{
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width:100%;
-  z-index: -1;
-  bottom: 0px;
-  left: 0;
-  
-  border: 0px solid purple;
-}
-.nav-top img{
-  position: absolute;
-  z-index: -2;
-  width:100%;
-  transform: translateY(-17%);
-   
-}
-
-.nav-info{
-  position: relative;
-  padding: 5%;
-  color: white;
-  height: 100%;
-  background: rgba(0,0,0,.6);
-  width: 100%;
-  background: rgb(35,35,35);
-background: linear-gradient(30deg, rgba(35,35,35,0.3) 24%, rgba(0,0,0,0) 56%);
-}
-
-.nav-info div{
-  margin: 15px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.nav-info p5{
-  font-size: .7em;
-}
-
-.loading{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 5px rgba(0,0,0,.7);
-  position: relative;
-  flex: 0 1 220px;
-}
-
-#navLoading {
-}
