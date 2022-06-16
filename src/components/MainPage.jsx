@@ -50,7 +50,7 @@ function MainPage(props){
     (userTop)?//if data is ready => render main-page else loading page
     <div className="MainPage">
        <Navbar userTop={userTop} access_token={access_token} / >
-       <Content setTopList={handleTopListChange} />
+       <Content userTop={userTop} setTopList={handleTopListChange} />
     </div>
     :<div className="main-page-loading">
         <h1> Loading </h1>
