@@ -1,0 +1,29 @@
+#top-card{
+  overflow: hidden;
+  position: relative;
+  border: 0px solid black;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-radius: 5px;
+}
+
+#top-card .info{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  border: 0px solid red;
+  background: linear-gradient(30deg, rgba(35,35,35,0.3) 24%, rgba(0,0,0,0) 56%);
+}
+
+#top-card h4{
+  color: white;
+  margin: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#top-card img{
+  width: 100%;
+  height: 100%;
+}

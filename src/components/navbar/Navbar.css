@@ -46,7 +46,7 @@
   right: 0px;
   bottom: 0px;
   height: 60%;
- 
+  border-bottom: 1px solid black;
 }
 
 .nav-top{
