@@ -1,17 +1,30 @@
 import React from "react";
 import "./Content.css";
 import Card from "./card/Card.jsx"
+import {getCardList} from "./contentUtility.js"
+
 
 function Content(props){
-  
-  let userTop = props.userTop.items;
-  console.log(userTop.splice(0,1));
-  let cards = userTop.map((val)=>{
-      return <Card name={val.name} img={val.images[0].url} />
-    });
-     
+  /* getCardList list get array of card component 
+     with all props 
+ */
+  let [cards,img,moreInfo] = getCardList(props.userTop);
+
+
   return(
    <div id="content">
+      <div className="top-section">
+        <div className="nav-top">
+            <img src={img} alt="top artist" />
+        </div>
+        <div className="nav-info">
+          <div>
+            <h4>{props.userTop.items[0].name} </h4>
+            <p5>{moreInfo}</p5>
+          </div>
+        </div>
+      </div>
+      
        <div className="top-list-of">
           <button value="artists"onClick={(e)=>props.setTopList(e.target.value)} type="button">Artists</button>
           <button value="tracks" onClick={(e)=>props.setTopList(e.target.value)} type="button">Songs</button>
