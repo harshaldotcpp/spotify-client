@@ -4,11 +4,11 @@ import './TopSection.css';
 
 
 function TopSection(props){
-  
+
   return(
     <div className="top-section">
         <div className="top-img">
-            <img src={props.img} alt="top artist" />
+            <img id="top-img" src={props.img} alt="top artist" />
         </div>
         <div className="top-info">
           <div>

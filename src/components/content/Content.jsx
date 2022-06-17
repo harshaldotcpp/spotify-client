@@ -36,6 +36,7 @@ function Content(props){
   
   
   
+
   
   return(
    <div id="content">
@@ -63,3 +64,4 @@ function Content(props){
 
 
 export default Content;
+

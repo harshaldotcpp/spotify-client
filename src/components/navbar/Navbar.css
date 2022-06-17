@@ -1,39 +1,39 @@
+:root{
+  --nav-color: whit;
+}
+
 .navbar{
   box-shadow: 0 0 1px rgba(0,0,0,.7);
   position: relative;
-  flex: 0 1 90px;
+  flex: 0 1;
+  background: var(--nav-color);
 }
 
-.control-panel{
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 0px solid blue;
-  height: 100%;
-  box-shadow: 0px 0px 10px rgba(0,0,0,.7);
-}
-.control-panel h1{
+ .navbar h1{
   border: 0px solid green;
   padding: .8rem;
 }
 
+
+
+.control-panel{
+  
+}
+
 .control-panel ul{
-  border: 0px solid red;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   list-style: none;
   border: 0px solid red;
 }
 
 .control-panel ul li{
-  flex-shrink: 0;
   border: 0px solid pink;
 }
 
 .control-panel button{
   font-family: 'Varela Round', sans-serif;
-  padding: .81rem;
+  padding: .71rem;
   border: none;
   background: none;
   font-size: 1rem;

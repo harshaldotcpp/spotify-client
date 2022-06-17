@@ -1,22 +1,21 @@
+:root{
+  --card-size:176px;
+}
+
 #content{
   overflow: scroll;
   flex:1;
-  
   border: 0px solid red;
 }
 
-
-
 .top-list-of{
-  color: #6f7886;
+  color: #6f7886; 
   display: flex;
- 
   padding: .7rem;
   padding-left: 1px;
   margin: .7rem;
   border-bottom: 2px solid #6f7886;
   width: auto;
-  background: #ffffff;
 }
 
 .top-list-of button{
@@ -27,23 +26,24 @@
   font-family: 'Varela Round', sans-serif;
   border: none;
   padding: 0px;
-  flex:0 0 ;
+  flex:0 0;
   display: inline-block;
   font-size: .9em;
+  
 }
 
 
 
 .top-list{
   display: grid;
-  grid-template-columns: repeat(auto-fit,175px);
-  grid-auto-rows: 175px;
+  grid-template-columns: repeat(auto-fit,var(--card-size));
+  grid-auto-rows: var(--card-size);
   grid-gap: 0.4rem;
   justify-content:center;
   width: 100%;
   min-height: 100%;
   border: 0px solid red;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 

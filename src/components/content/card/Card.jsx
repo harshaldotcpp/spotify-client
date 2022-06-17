@@ -4,9 +4,10 @@ import "./Card.css"
 
 function Card(props){
   
+
   return(
     <div id="top-card" >
-      <img src={props.img} />
+      <img id="top-img" src={props.img} />
       <div className="info">
         <div>
         <h4>{props.name}</h4>

@@ -20,8 +20,8 @@ function Navbar(props){
   
   return(
     <nav className="navbar">
-      <div className="control-panel">
           <h1> <strong> sjzhbdioab</strong> </h1>
+      <div className="control-panel">
           <ul>
             <li> <button index="hii" style={btnState[0]} id="time-0" value="&time_range=long_term" type="button" onClick={handleClickTimeBtn} > All Time </button> </li>
             <li> <button style={btnState[1]} id="time-1" value="&time_range=short_term" type="button" onClick={handleClickTimeBtn} > last 4 Week </button> </li>
