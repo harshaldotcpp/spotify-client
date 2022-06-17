@@ -14,12 +14,22 @@ function spotifyApi(handleOneLoad,apiEndpoint,access_token){
 
 
 
-function getAndSetUserTop(endpoint,setUserTop,access_token){
+function getAndSetUserTop(setUserTop,access_token){
+    let type = getAndSetUserTop.type;
+    let limit = getAndSetUserTop.limit;
+    let timeRange = getAndSetUserTop.timeRange;
+  
     spotifyApi(function(){
+      
       if(this.status === 200){
+        console.log("hdllo")
         setUserTop(JSON.parse(this.responseText));
       }
-    },"https://api.spotify.com/v1/me/top/"+endpoint,access_token);
-  }
+      
+      
+    },"https://api.spotify.com/v1/me/top/"+type+limit+timeRange,access_token);
+    
+}
+
 
 export { spotifyApi , getAndSetUserTop };

@@ -8,9 +8,9 @@ function Navbar(props){
       <div className="control-panel">
           <h1> <strong> Spotistate </strong> </h1>
           <ul>
-            <li> This week </li>
-            <li> This month </li>
-            <li> This Year </li>
+            <li> All Time </li>
+            <li> last 4 Week </li>
+            <li> 6 months </li>
           </ul>
       </div>
     </nav>

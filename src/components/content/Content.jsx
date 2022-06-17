@@ -4,13 +4,19 @@ import Card from "./card/Card.jsx"
 import {getCardList} from "./contentUtility.js"
 
 
+
 function Content(props){
-  /* getCardList list get array of card component 
+  /* getCardList function get array of card component 
      with all props 
  */
+  //console.log(props.userTop.href.split("?")[0].split("/").pop())
   let [cards,img,moreInfo] = getCardList(props.userTop);
-
-
+  
+  
+  function handleOnClickTypeBtn(e){
+    props.setTopList(e.target.value);
+  }
+  
   return(
    <div id="content">
       <div className="top-section">
@@ -26,10 +32,11 @@ function Content(props){
       </div>
       
        <div className="top-list-of">
-          <button value="artists"onClick={(e)=>props.setTopList(e.target.value)} type="button">Artists</button>
-          <button value="tracks" onClick={(e)=>props.setTopList(e.target.value)} type="button">Songs</button>
+          <button value="artists"onClick={handleOnClickTypeBtn} type="button">Artists</button>
+          <button value="tracks" onClick={handleOnClickTypeBtn} type="button">Songs</button>
           <button value="Albums" type="button">Albums</button>
        </div>
+       
        <div className="top-list">
            {cards}
        </div>

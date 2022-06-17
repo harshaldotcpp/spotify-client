@@ -5,10 +5,21 @@ import "./MainPage.css";
 import  fetchAccessToken  from "../apiCalls/spotifyAuthontication.js"
 import {getAndSetUserTop} from "../apiCalls/spotifyApi";
 
-/* getAndSetUserTop function make get request
-   and set UserTop state which either top artists or
-   track after geting data from api
+
+
+/*
+   getAndSetUserTop function make get request
+   and set userTop data. it has type and queries
+   which are store in itself function Object
+   they will be modified on different event/button presse
+ 
+   example if tracks button pressed handleEvent function will chnage type property to tracks and
+  and function will be invoke to make get request and set state
+   
 */
+
+
+
 
 
 function MainPage(props){
@@ -30,18 +41,27 @@ function MainPage(props){
        this function will fetch api data which is userTop artist as defailt when page loads
        this function will only run when access_token variable is set or changed
    */
-   getAndSetUserTop("artists",setUserTop,access_token);
+   
+   getAndSetUserTop.type = "artists";
+   getAndSetUserTop.limit = "?limit=21";
+   getAndSetUserTop.timeRange = "&time_range=long_term";
+   
+   getAndSetUserTop(setUserTop,access_token);
   },[access_token]);
   
   
  
-  function handleTopListChange(endpoint){
+  function handleTypeChange(type=null,limit=null,timeRange=null){
     /*
-      get userTop api data either   of top artists or top tracks
-      depeneding on which button pressed in content componenet by get request with
-      access_token and set userTop state after Loading  request
+      this function will handle button press event for type,
+      limit and timeRange. ii will get and set data
     */ 
-    getAndSetUserTop(endpoint,setUserTop,access_token);
+    getAndSetUserTop.type = (type)? type : getAndSetUserTop.type;
+    getAndSetUserTop.limit = (limit)? limit : getAndSetUserTop.limit;
+    getAndSetUserTop.timeRange = (timeRange)? timeRange : getAndSetUserTop.timeRange;
+    
+    
+    getAndSetUserTop(setUserTop,access_token);
   }
  
  
@@ -49,8 +69,8 @@ function MainPage(props){
   return (
     (userTop)?//if data is ready => render main-page else loading page
     <div className="MainPage">
-       <Navbar / >
-       <Content userTop={userTop} setTopList={handleTopListChange} />
+       <Navbar handleTimeChange={handleTypeChange} / >
+       <Content userTop={userTop} setTopList={handleTypeChange} />
     </div>
     :<div className="main-page-loading">
         <h1> Loading </h1>

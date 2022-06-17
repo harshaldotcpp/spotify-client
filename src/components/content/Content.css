@@ -46,19 +46,22 @@ background: linear-gradient(30deg, rgba(35,35,35,0.3) 24%, rgba(0,0,0,0) 56%);
 }
 
 .top-list-of{
+  color: #6f7886;
   display: flex;
   padding: .8rem .8rem .8rem .3rem;
   margin: 1rem;
   border-bottom: 2px solid #6f7886;
-  width: auto;;
+  width: auto;
   background: #ffffff;
 }
 
 .top-list-of button{
+
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 6px;
   margin-right: 1.5rem;
   font-family: 'Varela Round', sans-serif;
+  font-size: 2r;
   border: none;
   padding: 0px;
   flex:0 0 ;

@@ -4,19 +4,20 @@
  
  
  function getImgName(top){
-  const endpoint = top.href.split("/").pop();
- 
+  const endpoint = top.href.split("?")[0].split("/").pop();
+  console.log(endpoint);
     top = top.items[0];
     if(endpoint === "artists"){
     }
     else{
+      console.log(endpoint)
       return [top.album.images[0].url,"by "+top.artists[0].name];
     }
   }
   
   
 function getCardList(userTop){
-  const endpoint = userTop.href.split("/").pop();
+  const endpoint = userTop.href.split("?")[0].split("/").pop();
    userTop = userTop.items;
    
    if(endpoint === "artists"){
