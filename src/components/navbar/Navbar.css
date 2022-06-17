@@ -8,27 +8,36 @@
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   border: 0px solid blue;
   height: 100%;
   box-shadow: 0px 0px 10px rgba(0,0,0,.7);
 }
 .control-panel h1{
   border: 0px solid green;
-  padding-left: 4%;
+  padding: .8rem;
 }
 
 .control-panel ul{
-  
   border: 0px solid red;
-  padding-left: 4%;
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
   list-style: none;
-  column-gap: 10%;
+  border: 0px solid red;
 }
 
 .control-panel ul li{
   flex-shrink: 0;
+  border: 0px solid pink;
 }
+
+.control-panel button{
+  padding: .81rem;
+  border: none;
+ /* border-bottom: 3px solid orange; */
+  background: none;
+  font-size: 1rem;
+}
+
+
 
