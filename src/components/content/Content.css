@@ -6,50 +6,14 @@
 }
 
 
-.top-section{
-   position: relative;  
- overflow: hidden;
-  height: 170px;
-  border: 0px solid black;
-}
-
-.nav-top{
-  position: absolute;
-  height: 100%;
-  width:100%;
-  border: 0px solid purple;
-}
-.nav-top img{
-  width:100%;
-  transform: translateY(-17%);
-   
-}
-
-.nav-info{
-  position: relative;
-  padding: 5%;
-  color: white;
-  height: 100%;
-  width: 100%;
-background: linear-gradient(30deg, rgba(35,35,35,0.3) 24%, rgba(0,0,0,0) 56%);
-}
-
-.nav-info div{
-  margin: 15px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.nav-info p5{
-  font-size: .7em;
-}
 
 .top-list-of{
   color: #6f7886;
   display: flex;
-  padding: .8rem .8rem .8rem .3rem;
-  margin: 1rem;
+ 
+  padding: .7rem;
+  padding-left: 1px;
+  margin: .7rem;
   border-bottom: 2px solid #6f7886;
   width: auto;
   background: #ffffff;

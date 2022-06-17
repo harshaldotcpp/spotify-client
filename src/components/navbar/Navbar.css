@@ -32,9 +32,9 @@
 }
 
 .control-panel button{
+  font-family: 'Varela Round', sans-serif;
   padding: .81rem;
   border: none;
- /* border-bottom: 3px solid orange; */
   background: none;
   font-size: 1rem;
 }
