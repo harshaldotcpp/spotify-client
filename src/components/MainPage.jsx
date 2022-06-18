@@ -51,7 +51,7 @@ function MainPage(props){
   
   
  
-  function handleTypeChange(type=null,limit=null,timeRange=null){
+  const handleTypeChange = (type=null,limit=null,timeRange=null) => {
     /*
       this function will handle button press event for type,
       limit and timeRange. ii will get and set data
@@ -63,7 +63,6 @@ function MainPage(props){
     
     getAndSetUserTop(setUserTop,access_token);
   }
- 
  
  
   return (

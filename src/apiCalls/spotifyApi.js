@@ -1,35 +1,32 @@
 
 
-function spotifyApi(handleOneLoad,apiEndpoint,access_token){
-   if(access_token === undefined)
-    return;
-  
-   let xhr = new XMLHttpRequest();
-   xhr.open("GET",apiEndpoint,true);
-   xhr.setRequestHeader("Authorization", "Bearer "+access_token);
-   xhr.setRequestHeader("Content-Type", "application/json");
-   xhr.send(null);
-   xhr.onload = handleOneLoad;
-}
-
 
 
 function getAndSetUserTop(setUserTop,access_token){
+    if(access_token == undefined) return;
+    
     let type = getAndSetUserTop.type;
     let limit = getAndSetUserTop.limit;
     let timeRange = getAndSetUserTop.timeRange;
-  
-    spotifyApi(function(){
-      
-      if(this.status === 200){
-        console.log("hdllo")
-        setUserTop(JSON.parse(this.responseText));
+    
+    const SPOTIFY_API_URL = "https://api.spotify.com/v1/me/top/"+type+limit+timeRange;
+   
+    const info = {
+      method:"get",
+      headers:{
+        "Authorization": "Bearer "+access_token,
+        "Content-Type": "application/json"
       }
-      
-      
-    },"https://api.spotify.com/v1/me/top/"+type+limit+timeRange,access_token);
+    }  
+    
+    fetch(SPOTIFY_API_URL,info)
+    .then(response => response.json())
+    .then((data)=> setUserTop(data))
+    .catch((e)=>{
+       
+    });
     
 }
 
 
-export { spotifyApi , getAndSetUserTop };
+export { getAndSetUserTop };
