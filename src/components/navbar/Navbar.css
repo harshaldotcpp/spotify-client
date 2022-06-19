@@ -10,12 +10,21 @@
 }
 
  .navbar h1{
+   display: inline-block;
   border: 0px solid green;
   padding: .8rem;
 }
 
-
-
+.heading{
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+}
+.menu{
+  height: 0;
+  transition: .500s height ease;
+   background: #E5E5E5;
+}
 .control-panel{
   
 }

@@ -3,7 +3,7 @@
 
 
 function getAndSetUserTop(setUserTop,access_token){
-    if(access_token == undefined) return;
+    console.log(access_token);
     
     let type = getAndSetUserTop.type;
     let limit = getAndSetUserTop.limit;

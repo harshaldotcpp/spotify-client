@@ -1,8 +1,8 @@
 import React from "react";
 
 const TOKEN = "https://accounts.spotify.com/api/token";
-const client_id = "a201e1c8ee7c4676886781255be2c68b";
-const client_secret = "43599d0109654011a6a3295b65f2eb1b";
+const CLIENT_ID = "a201e1c8ee7c4676886781255be2c68b";
+const CLIENT_SECRET = "43599d0109654011a6a3295b65f2eb1b";
 let access;
 let refresh;
 
@@ -20,13 +20,14 @@ function getAccessToken(code){
  let [access_token,setAccessToken] = React.useState();
  let [refresh_token,setRefreshToken] = React.useState();
  let [expires_in,setExpireIn] = React.useState();
+  
  function fetchAccessToken(code){
   //console.log(code)
     let body = "grant_type=authorization_code";
     body += "&code=" + code;
     body += "&redirect_uri=" + encodeURI("http://localhost:8158/index.html");
-    body += "&client_id="+client_id;
-    body += "&client_secret=" + client_secret;
+    body += "&client_id="+CLIENT_ID;
+    body += "&client_secret=" + CLIENT_SECRET;
     callAuthorizationApi(body);
   }
 
@@ -37,7 +38,7 @@ function getAccessToken(code){
     let xhr = new XMLHttpRequest();
     xhr.open("POST",TOKEN,true);
     xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
-    xhr.setRequestHeader("Authorization","Basic "+btoa(client_id +":"+client_secret));
+    xhr.setRequestHeader("Authorization","Basic "+btoa(CLIENT_ID +":"+CLIENT_SECRET));
     xhr.send(body);
     xhr.onload = handleAutorizationResponse;
   
@@ -50,8 +51,7 @@ function getAccessToken(code){
        if(data.refresh_token != undefined)
         refresh = data.refresh_token;
         
-        
-  
+        window.history.pushState({},null,"index.html");
         setAccessToken(access);
         setRefreshToken(refresh);
      }
@@ -69,7 +69,7 @@ React.useEffect(()=>{
     and return that token from where 
     this whole function was called
   */
-  
+
     fetchAccessToken(code);
    
  },[code]);

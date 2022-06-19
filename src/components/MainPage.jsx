@@ -23,20 +23,23 @@ import {getAndSetUserTop} from "../apiCalls/spotifyApi";
 
 
 function MainPage(props){
-//get access acessToken from code
- let [access_token,refresh_token] = fetchAccessToken(props.code);
 
+//get access acessToken from code
+
+ let [access_token,refresh_token] = fetchAccessToken(props.code);
 
 
 /* 
   userTop data from api.spotify saved as
   state of this component either top tracks or top artists
 */
+
  let [userTop, setUserTop] = React.useState(null);
 
 
 
  React.useEffect(()=>{
+   if(!access_token) return;
    /*
        this function will fetch api data which is userTop artist as defailt when page loads
        this function will only run when access_token variable is set or changed
@@ -47,7 +50,9 @@ function MainPage(props){
    getAndSetUserTop.timeRange = "&time_range=long_term";
    
    getAndSetUserTop(setUserTop,access_token);
-  },[access_token]);
+  
+   
+ },[access_token]);
   
   
  
@@ -64,7 +69,7 @@ function MainPage(props){
     getAndSetUserTop(setUserTop,access_token);
   }
  
- 
+
   return (
     (userTop)?//if data is ready => render main-page else loading page
     <div className="MainPage">

@@ -2,17 +2,17 @@ import React from 'react';
 import './App.css';
 import Login from './Login.jsx'
 import MainPage from "./components/MainPage.jsx"
+import getAccessToken from "./apiCalls/spotifyAuthontication.js";
 
 
-  let a = window.location.search;
-  let urlparams = new URLSearchParams(a);
-  let code = urlparams.get("code");
-
+  let code = new URLSearchParams(window.location.search)
+  .get('code');
+  
 function App() {
-  return ( (code)
+
+  return ((code)
     ?<MainPage code={code} />
     :<Login />
-   
   );
 }
 

@@ -11,11 +11,8 @@ function Content(props){
      getCardList function get array of card component 
      with all props 
  */
-
+  
   let [cards,img,moreInfo] = getCardList(props.userTop);
-
-
-
 
   
   //type-btn state
@@ -34,10 +31,6 @@ function Content(props){
   
   
   
-  
-  
-
-  
   return(
    <div id="content">
    {/**********************************************************/}
@@ -53,6 +46,7 @@ function Content(props){
           <button style={btnState[1]} id="type-1" value="tracks" onClick={handleOnClickTypeBtn} type="button">Songs</button>
           <button style={btnState[2]} id="type-2" value="Albums" type="button">Albums</button>
       </div>
+      
        
       <div className="top-list">
            {cards}

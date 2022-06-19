@@ -9,7 +9,10 @@ function Login(){
   
   return(
     <div id="login-page" >
-      <a href={AUTH_URL} > login spotify </a>
+      <div className="login-div" >
+        <h1> Log into your Spotify </h1>
+        <a href={AUTH_URL} > login spotify </a>
+      </div> 
     </div> 
   )
 }
