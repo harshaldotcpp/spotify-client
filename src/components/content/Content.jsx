@@ -39,7 +39,7 @@ function Content(props){
         moreInfo={moreInfo} 
         name={props.userTop.items[0].name}
       />
-   {/*********************************************************/}
+  {/* ********************************************************/}
     
       <div className="top-list-of">
           <button style={btnState[0]} id="type-0" value="artists"onClick={handleOnClickTypeBtn} type="button">Artists</button>
@@ -49,7 +49,7 @@ function Content(props){
       
        
       <div className="top-list">
-           {cards}
+        {cards}
       </div>
       
    </div>

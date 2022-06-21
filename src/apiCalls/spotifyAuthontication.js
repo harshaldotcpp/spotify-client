@@ -51,7 +51,7 @@ function getAccessToken(code){
        if(data.refresh_token != undefined)
         refresh = data.refresh_token;
         
-        window.history.pushState({},null,"index.html");
+      /*  window.history.pushState({},null,"index.html");*/
         setAccessToken(access);
         setRefreshToken(refresh);
      }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-
+import Menu from "./Menu.jsx";
 function Navbar(props){
   //change data according to time
   const [menu, setmenu] =React.useState({});
@@ -20,10 +20,10 @@ function Navbar(props){
   
   const handleCheck = (e)=>{
     if(e.target.checked){
-      setmenu({height: "300px"});
+      setmenu({height: "375px",opacity:"1"});
     }
     else
-      setmenu({height: "0px"})
+      setmenu({height: "0px",opacity:"0"})
   }
   
   
@@ -31,14 +31,13 @@ function Navbar(props){
     <nav className="navbar">
     
          <div className="heading" >
-           <h1> <strong> sjzhbdioab</strong> </h1>
           <input onClick={handleCheck} type="checkBox" />
+           <h1> <strong>suoppnfwrvoi</strong> </h1>
+           <img sr="" alt=" " />
          </div> 
           
-          
-       <div className="menu" style={menu}> 
-       
-       </div>
+        <Menu style={menu} />
+  
         <div className="control-panel">
           <ul>
             <li> <button index="hii" style={btnState[0]} id="time-0" value="&time_range=long_term" type="button" onClick={handleClickTimeBtn} > All Time </button> </li>
