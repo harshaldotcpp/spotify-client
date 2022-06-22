@@ -24,8 +24,24 @@ const createCardCompoListForTrack = (userTop) =>{
      });
 } 
 
-const getType = (userTop) => {
+const getTopType = (userTop) => {
   return userTop.href.split("?")[0].split("/").pop();
+}
+
+const getFirstArtistInfo = (userTop) => {
+  const info = {};
+  info.name = userTop[0].name;
+  info.img = userTop[0].images[0].url;
+  info.moreInfo = userTop[0].genres[0];
+  return info;
+}
+
+const getFirstTrackInfo = (userTop) => {
+  const info = {};
+  info.name = userTop[0].name;
+  info.img = userTop[0].album.images[1].url;
+  info.moreInfo = "by "+userTop[0].artists[0].name;
+  return info;
 }
 
 /*********/
@@ -33,20 +49,14 @@ const getType = (userTop) => {
 
 
 const getFirstCardInfo = (userTop) => {
-  const type = getType(userTop);
-  
+  const type = getTopType(userTop);
   userTop = userTop.items;
-  const info = {};
-  if(type === "artists"){
-    info.name = userTop[0].name;
-    info.img = userTop[0].images[0].url;
-    info.moreInfo = userTop[0].genres[0];
-  }
-  else{
-    info.name = userTop[0].name;
-    info.img = userTop[0].album.images[1].url;
-    info.moreInfo = "by "+userTop[0].artists[0].name;
-  }
+  let info = {};
+  
+  if(type === "artists")
+    info = getFirstArtistInfo(userTop);
+  else
+    info = getFirstTrackInfo(userTop);
   
   return info;
 }
@@ -55,7 +65,7 @@ const getFirstCardInfo = (userTop) => {
 
 
 const getCardList = (userTop) => {
- const type = getType(userTop);
+ const type = getTopType(userTop);
   userTop = userTop.items;
    
    if(type === "artists"){
