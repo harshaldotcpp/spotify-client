@@ -5,13 +5,14 @@ import MainPage from "./components/MainPage.jsx"
 import getAccessToken from "./apiCalls/spotifyAuthontication.js";
 
 
-  let code = new URLSearchParams(window.location.search)
+  let isCode = new URLSearchParams(window.location.search)
   .get('code');
   
 function App() {
 
-  return ((code)
-    ?<MainPage code={code} />
+  return (
+    (isCode)
+    ?<MainPage code={isCode} />
     :<Login />
   );
 }

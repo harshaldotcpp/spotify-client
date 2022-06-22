@@ -2,15 +2,12 @@
 
 
 
-function getAndSetUserTop(setUserTop,access_token){
-    console.log(access_token);
+function getAndSetUserTopFromSpotifyApi(body,setUserTop,access_token){
     
-    let type = getAndSetUserTop.type;
-    let limit = getAndSetUserTop.limit;
-    let timeRange = getAndSetUserTop.timeRange;
-    
-    const SPOTIFY_API_URL = "https://api.spotify.com/v1/me/top/"+type+limit+timeRange;
-   
+  
+
+    const SPOTIFY_API_URL = body.url+body.type+body.limit+body.timeRange+body.offset;
+    console.log(body.timeRange)
     const info = {
       method:"get",
       headers:{
@@ -29,4 +26,4 @@ function getAndSetUserTop(setUserTop,access_token){
 }
 
 
-export { getAndSetUserTop };
+export { getAndSetUserTopFromSpotifyApi };

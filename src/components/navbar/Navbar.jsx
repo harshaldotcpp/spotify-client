@@ -15,7 +15,8 @@ function Navbar(props){
       return [...obj];
     });
     
-    props.handleTimeChange(null,null,e.target.value);
+    props.handleTimeChange(e.target.value);
+    props.handleTimeChange(e.target.value);
   }
   
   const handleCheck = (e)=>{
