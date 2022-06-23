@@ -1,20 +1,20 @@
 import React from "react";
 import './Menu.css';
-
+import NowPlaying from "./NowPlaying.jsx"
 
 function Menu(props){
   return(
     <div className="menu" style={props.style}>
-       
-       <div className="now-playing" >
-       </div>
+    
+      <NowPlaying access_token={props.access_token}  />
+      
       <ul className="menu-ul" style={{display:"flex",flexDirection:"column"}} >
         <li> Profile </li>
         <li> Top </li>
         <li> Recently Played </li>
         <li> Recommendation </li>
-        <li>last fm</li>
-        <li> log out </li>
+        <li>Playlists</li>
+        <li> Log Out </li>
       </ul>
   
     </div>

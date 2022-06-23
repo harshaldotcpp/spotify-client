@@ -16,13 +16,11 @@ const USERTOP_REQUEST_URL ={
 
 
 
-
 function MainPage(props){
 
 //get access acessToken from code
-
  let [access_token,refresh_token] = fetchAccessToken(props.code);
-
+  
 
 /* 
   userTop data from api.spotify saved as
@@ -30,6 +28,7 @@ function MainPage(props){
 */
 
  let [userTops, setUserTop] = React.useState(null);
+console.log(userTops);
 
 
 
@@ -67,7 +66,7 @@ function MainPage(props){
   return (
     (userTops)?//if data is ready => render main-page else loading page
     <div className="MainPage">
-       <Navbar handleTimeChange={handleTimeRangeChange} / >
+       <Navbar handleTimeChange={handleTimeRangeChange} access_token={access_token} / >
        <Content userTop={userTops} setTopList={handleTypeChange} />
     </div>
     :<div className="main-page-loading">

@@ -22,29 +22,3 @@
    align-items: center;
 }
 
-.control-panel{
-  
-}
-
-.control-panel ul{
-  display: flex;
-  justify-content: start;
-  list-style: none;
-  border: 0px solid red;
-}
-
-.control-panel ul li{
-  font-size: .2rem;
-  border: 0px solid pink;
-}
-
-.control-panel button{
-  font-family: 'Varela Round', sans-serif;
-  padding: .71rem;
-  border: none;
-  background: none;
-  font-size: 1rem;
-}
-
-
-

@@ -44,16 +44,17 @@ const getFirstTrackInfo = (userTop) => {
   return info;
 }
 
-/*********/
+/***************************/
 
 
 
 const getFirstCardInfo = (userTop) => {
-  const type = getTopType(userTop);
+  
+  const topType = getTopType(userTop);
   userTop = userTop.items;
   let info = {};
   
-  if(type === "artists")
+  if(topType === "artists")
     info = getFirstArtistInfo(userTop);
   else
     info = getFirstTrackInfo(userTop);
@@ -65,19 +66,19 @@ const getFirstCardInfo = (userTop) => {
 
 
 const getCardList = (userTop) => {
- const type = getTopType(userTop);
+  const type = getTopType(userTop);
   userTop = userTop.items;
-   
-   if(type === "artists"){
-     let cards = createCardCompoListForArtist(userTop);
-     cards.splice(0,1);
-     return cards;
-   }
-   else{
-     let cards = createCardCompoListForTrack(userTop);
-     cards.splice(0,1)
-      return cards
-   }
+  let cards = [];
+  
+  if(type === "artists"){
+    cards = createCardCompoListForArtist(userTop);
+    cards.splice(0,1);
+  }
+  else{
+    cards = createCardCompoListForTrack(userTop);
+    cards.splice(0,1);
+  }
+  return cards 
 }
  
  
