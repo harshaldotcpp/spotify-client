@@ -1,20 +1,20 @@
 .time-range{
-  
 }
 
 .time-range ul{
   display: flex;
   justify-content: start;
   list-style: none;
-  border: 0px solid red;
 }
 
 .time-range ul li{
+
   font-size: .2rem;
   border: 0px solid pink;
 }
 
 .time-range button{
+  color: black;
   font-family: 'Varela Round', sans-serif;
   padding: .71rem;
   border: none;

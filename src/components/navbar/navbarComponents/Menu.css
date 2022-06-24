@@ -1,6 +1,10 @@
+:root{
+  --background-color: white;
+}
+
 .menu{
   transition: .300s height ease, .300s opacity ease;
-  background: white;
+  background: var(--background-color);
   overflow: scroll;
   opacity: 0;
 }
@@ -14,7 +18,7 @@
 }
 
 .menu-ul li{
-  border-bottom: 1px solid #6f7886;
+  border-bottom: 1px solid rgba(111,120,134,.3);
   padding: .8rem;
   padding-left: 0px;
 }
