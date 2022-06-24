@@ -1,9 +1,11 @@
-  const reqInfo = {
-      method:"get",
-      headers:{
-        "Authorization": "Bearer ",
-        "Content-Type": "application/json"
-      }
+import { getNowPlayingInfo } from "../components/navbar/navbarComponents/utility.js";
+
+const reqInfo = {
+  method:"get",
+  headers:{
+    "Authorization": "Bearer ",
+    "Content-Type": "application/json"
+  }
 } 
 
 
@@ -40,7 +42,8 @@ function getAndSetNowPlaying(setNowPlaying,access_token){
 
 
   fetchApi((data)=>{
-    setNowPlaying(data);
+   data = getNowPlayingInfo(data);
+  setNowPlaying(data);
   },SPOTIFY_API_URL,reqInfo)
   
 }

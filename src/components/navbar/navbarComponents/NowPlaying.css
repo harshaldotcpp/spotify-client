@@ -1,0 +1,31 @@
+.now-playing{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid  #6f7886;
+  padding: 10px;
+  color: #6f7886;
+}
+
+
+.now-playing-card{
+  border-radius: 11px;
+  background: #F5F5F5;
+  display: flex;
+  flex: 1;
+  gap: 7px;
+  border: 0px solid red;
+  padding: 10px;
+}
+
+.now-playing-info{
+  line-height: .8rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.now-playing-img{
+  height: 3rem;
+  width: 3rem;
+}

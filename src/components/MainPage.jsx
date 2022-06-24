@@ -28,7 +28,6 @@ function MainPage(props){
 */
 
  let [userTops, setUserTop] = React.useState(null);
-console.log(userTops);
 
 
 
@@ -58,16 +57,23 @@ console.log(userTops);
   const handleTimeRangeChange = (time_range) => {
     USERTOP_REQUEST_URL.timeRange = time_range
     getAndSetUserTopFromSpotifyApi(USERTOP_REQUEST_URL,setUserTop,access_token);
-  
-    
   }
  
 
   return (
     (userTops)?//if data is ready => render main-page else loading page
     <div className="MainPage">
-       <Navbar handleTimeChange={handleTimeRangeChange} access_token={access_token} / >
-       <Content userTop={userTops} setTopList={handleTypeChange} />
+    
+      <Navbar 
+        handleTimeChange={handleTimeRangeChange} 
+        access_token={access_token} 
+      / >
+      
+      <Content 
+        userTop={userTops} 
+        setTopList={handleTypeChange}
+      />
+      
     </div>
     :<div className="main-page-loading">
         <h1> Loading </h1>

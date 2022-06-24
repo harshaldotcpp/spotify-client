@@ -1,17 +1,10 @@
 .menu{
-  height: 0;
-  transition: .500s height ease,.400s opacity ease-out;
+  transition: .300s height ease, .300s opacity ease;
   background: white;
   overflow: scroll;
   opacity: 0;
 }
 
-.now-playing{
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid  #6f7886;
-  padding: 10px;
-}
 
 
 .menu-ul{
@@ -26,25 +19,3 @@
   padding-left: 0px;
 }
 
-.now-playing-card{
-  border-radius: 11px;
-  color: #6f7886;
-  background: #F5F5F5;
-  display: flex;
-  flex: 1;
-  gap: 7px;
-  border: 0px solid red;
-  padding: 10px;
-}
-
-.now-playing-info{
-  line-height: .8rem;
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.now-playing-img{
-  height: 3rem;
-  width: 3rem;
-}

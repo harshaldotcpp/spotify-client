@@ -2,11 +2,10 @@ import React from "react";
 import "./Navbar.css";
 import Menu from "./navbarComponents/Menu.jsx";
 import TimeRange from "./navbarComponents/TimeRange.jsx";
+
 function Navbar(props){
   //change data according to time
-  const [menuStyle, setmenuStyle] =React.useState({});
- 
-  
+  const [menuStyle, setmenuStyle] = React.useState({height: "0px",opacity:"0"});
   
   const handleCheck = (e)=>{
     if(e.target.checked){
