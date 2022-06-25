@@ -21,7 +21,7 @@ function Navbar(props){
     
          <div className="heading" >
           <input onClick={handleCheck} type="checkBox" />
-           <h1> <strong>suoppnfwrvoi</strong> </h1>
+           <h1> <strong>something</strong> </h1>
            <img sr="" alt=" " />
          </div> 
         

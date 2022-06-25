@@ -11,11 +11,11 @@
 
 .now-playing-card{
   border-radius: 11px;
-  background: #F5F5F5;
   display: flex;
   flex: 1;
   gap: 7px;
   padding: 10px;
+  border: 1px solid rgba(111,120,134,.3);
 }
 
 .now-playing-info{
@@ -26,7 +26,8 @@
 }
 
 .now-playing-img{
-  border-radius: 3px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
   height: 3rem;
   width: 3rem;
 }
