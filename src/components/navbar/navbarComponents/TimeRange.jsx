@@ -19,9 +19,9 @@ function TimeRange(props){
   return(
     <div className="time-range">
       <ul>
-        <li> <button index="hii" style={btnState[0]} id="time-0" value="&time_range=long_term" type="button" onClick={handleClickTimeBtn} > All Time </button> </li>
-        <li> <button style={btnState[1]} id="time-1" value="&time_range=short_term" type="button" onClick={handleClickTimeBtn} > last 4 Week </button> </li>
-        <li> <button style={btnState[2]} id="time-2" value="&time_range=medium_term" type="button" onClick={handleClickTimeBtn} > 6 months </button> </li>
+        <li> <button index="hii" style={btnState[0]} id="time-0" value="long_term" type="button" onClick={handleClickTimeBtn} > All Time </button> </li>
+        <li> <button style={btnState[1]} id="time-1" value="short_term" type="button" onClick={handleClickTimeBtn} > last 4 Week </button> </li>
+        <li> <button style={btnState[2]} id="time-2" value="medium_term" type="button" onClick={handleClickTimeBtn} > 6 months </button> </li>
       </ul>
     </div>
   );

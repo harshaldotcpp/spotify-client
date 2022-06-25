@@ -6,24 +6,8 @@ import  fetchAccessToken  from "../apiCalls/spotifyAuthontication.js"
 import { getRequestToSpotifyApi } from "../apiCalls/spotifyApi";
 import { UserTopRequestUrl } from "../urlClasses/topUserUrl.js";
 
-const USERTOP_REQUEST_URL ={
-  url: "https://api.spotify.com/v1/me/top",
-  type:"/artists",
-  limit: "?limit=21",
-  timeRange: "&time_range=long_term",
-  offset: "&offset=0",
-}
+const USERTOP_REQUEST_URL = new UserTopRequestUrl();
 
-
-const convertUrlObjectToUrl = () =>{
-  let body = "";
-  Object.entries(USERTOP_REQUEST_URL).forEach((val)=>{
-      body += val[1];
-  });
-  return body;
-}
-
-const usertopUrl = new UserTopRequestUrl();
 
 
 function MainPage(props){
@@ -48,9 +32,8 @@ function MainPage(props){
        this function will only run when access_token variable is set or changed
    console.log(USERTOP_REQUEST_URL.geturl())
    */
-   let body = convertUrlObjectToUrl();
-    
-   getRequestToSpotifyApi(body,setUserTop,access_token);
+   
+   getRequestToSpotifyApi(USERTOP_REQUEST_URL.url,setUserTop,access_token);
 
  },[access_token]);
   
@@ -61,19 +44,15 @@ function MainPage(props){
       this function will handle button press event for type,
       limit and timeRange. ii will get and set data
     */ 
-    USERTOP_REQUEST_URL.type = type;
-    let body = convertUrlObjectToUrl();
-    
-    
-    getRequestToSpotifyApi(body,setUserTop,access_token);
+    USERTOP_REQUEST_URL.setType(type);
+    getRequestToSpotifyApi(USERTOP_REQUEST_URL.url,setUserTop,access_token);
   }
   
   
   const handleTimeRangeChange = (time_range) => {
-    USERTOP_REQUEST_URL.timeRange = time_range
     
-    let body = convertUrlObjectToUrl();
-    getRequestToSpotifyApi(body,setUserTop,access_token);
+    USERTOP_REQUEST_URL.setTimeRange(time_range);
+    getRequestToSpotifyApi(USERTOP_REQUEST_URL.url,setUserTop,access_token);
   }
  
 

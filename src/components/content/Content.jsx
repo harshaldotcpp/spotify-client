@@ -43,8 +43,8 @@ function Content(props){
   {/* ********************************************************/}
     
       <div className="top-list-of">
-          <button style={btnState[0]} id="type-0" value="/artists"onClick={handleOnClickTypeBtn} type="button">Artists</button>
-          <button style={btnState[1]} id="type-1" value="/tracks" onClick={handleOnClickTypeBtn} type="button">Songs</button>
+          <button style={btnState[0]} id="type-0" value="artists" onClick={handleOnClickTypeBtn} type="button">Artists</button>
+          <button style={btnState[1]} id="type-1" value="tracks" onClick={handleOnClickTypeBtn} type="button">Songs</button>
           <button style={btnState[2]} id="type-2" value="Albums" type="button">Albums</button>
       </div>
       
