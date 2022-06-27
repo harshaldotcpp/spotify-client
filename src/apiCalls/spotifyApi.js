@@ -22,7 +22,7 @@ function fetchApi(doThis,SPOTIFY_API_URL,info,setUserTop){
 }
 
 
-function getRequestToSpotifyApi(SPOTIFY_API_URL,setUserTop,access_token){
+function getRequestToSpotifyApi(setUserTop,SPOTIFY_API_URL,access_token){
     
   reqInfo.headers["Authorization"] = "Bearer " + access_token;
   

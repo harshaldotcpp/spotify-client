@@ -3,6 +3,7 @@ import "./NowPlaying.css"
 import { getRequestToSpotifyApi } from "/src/apiCalls/spotifyApi.js"
 import { getNowPlayingInfo } from "./utility.js";
 
+const NOW_PLAYING_URL = "https://api.spotify.com/v1/me/player/currently-playing";
 function NowPlaying(props){
   
   let [nowPlaying,setNowplaying] = React.useState(null);
@@ -10,10 +11,12 @@ function NowPlaying(props){
   
   
   React.useEffect(()=>{
-    getRequestToSpotifyApi("https://api.spotify.com/v1/me/player/currently-playing",(data)=>{
+    getRequestToSpotifyApi((data)=>{
+      
       data = getNowPlayingInfo(data);
       setNowplaying(data);
-    },props.access_token);
+      
+    },NOW_PLAYING_URL,props.access_token);
   });
   
   

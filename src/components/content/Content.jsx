@@ -11,7 +11,6 @@ function Content(props){
      getCardList function get array of card component 
      with all props 
  */
-  
    const cards = getCardList(props.userTop);
    const firstCardInfo = getFirstCardInfo(props.userTop);
 

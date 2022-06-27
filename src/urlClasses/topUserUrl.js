@@ -3,7 +3,7 @@
 class UserTopRequestUrl{
   
   constructor(){
-    this.type = "tracks";
+    this.type = "artists";
     this.limit = "21";
     this.offset = "0";
     this.timeRange = "long_term";

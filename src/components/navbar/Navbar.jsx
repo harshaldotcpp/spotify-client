@@ -6,13 +6,16 @@ import TimeRange from "./navbarComponents/TimeRange.jsx";
 function Navbar(props){
   //change data according to time
   const [menuStyle, setmenuStyle] = React.useState({height: "0px",opacity:"0"});
-  
+  const [hamburger, setHambergerStyle] = React.useState(["",""])
   const handleCheck = (e)=>{
     if(e.target.checked){
       setmenuStyle({height: "375px",opacity:"1"});
+      setHambergerStyle(["bar1","bar2"]);
     }
-    else
+    else{
       setmenuStyle({height: "0px",opacity:"0"})
+      setHambergerStyle(["",""]);
+    }
   }
   
   
@@ -20,7 +23,13 @@ function Navbar(props){
     <nav className="navbar">
     
          <div className="heading" >
-          <input onClick={handleCheck} type="checkBox" />
+         <label className="hamburgerMenu" for="navigation" >
+          <input id="navigation" onClick={handleCheck} type="checkBox" />
+          <div className={`hambar ${hamburger[0]}`} >
+          </div>
+          <div className={`hambar ${hamburger[1]}`} >
+          </div>
+        </label>
            <h1> <strong>something</strong> </h1>
            <img sr="" alt=" " />
          </div> 

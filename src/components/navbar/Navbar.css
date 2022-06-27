@@ -24,3 +24,31 @@
    align-items: center;
 }
 
+.hamburgerMenu{
+  margin: 1em;
+  width: 1.1rem;
+}
+
+.hamburgerMenu input{
+  display: none;
+}
+
+.hambar{
+  border: 1px #6f7886;
+  margin-bottom: 4px;
+  border: 1px solid #6f7886;
+  transition: .4s ease;
+}
+.bar1{
+  transform: translateY(145%) rotate(40deg); 
+}
+
+.bar2{
+  transform: translateY(-145%) rotate(-40deg); 
+}
+
+
+.heading img{
+  margin: 1.2em;
+}
+

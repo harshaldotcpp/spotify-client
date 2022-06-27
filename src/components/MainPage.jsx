@@ -6,7 +6,7 @@ import  fetchAccessToken  from "../apiCalls/spotifyAuthontication.js"
 import { getRequestToSpotifyApi } from "../apiCalls/spotifyApi";
 import { UserTopRequestUrl } from "../urlClasses/topUserUrl.js";
 
-const USERTOP_REQUEST_URL = new UserTopRequestUrl();
+const USERTOP_URL = new UserTopRequestUrl();
 
 
 
@@ -33,7 +33,7 @@ function MainPage(props){
    console.log(USERTOP_REQUEST_URL.geturl())
    */
    
-   getRequestToSpotifyApi(USERTOP_REQUEST_URL.url,setUserTop,access_token);
+   getRequestToSpotifyApi(setUserTop,USERTOP_URL.url,access_token);
 
  },[access_token]);
   
@@ -44,15 +44,15 @@ function MainPage(props){
       this function will handle button press event for type,
       limit and timeRange. ii will get and set data
     */ 
-    USERTOP_REQUEST_URL.setType(type);
-    getRequestToSpotifyApi(USERTOP_REQUEST_URL.url,setUserTop,access_token);
+    USERTOP_URL.setType(type);
+    getRequestToSpotifyApi(setUserTop,USERTOP_URL.url,access_token);
   }
   
   
   const handleTimeRangeChange = (time_range) => {
     
-    USERTOP_REQUEST_URL.setTimeRange(time_range);
-    getRequestToSpotifyApi(USERTOP_REQUEST_URL.url,setUserTop,access_token);
+    USERTOP_URL.setTimeRange(time_range);
+  getRequestToSpotifyApi(setUserTop,USERTOP_URL.url,access_token);
   }
  
 
