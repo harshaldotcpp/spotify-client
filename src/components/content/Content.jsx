@@ -9,7 +9,7 @@ import {getCardList, getFirstCardInfo } from "./contentUtility.js"
 function Content(props){
   /*
      getCardList function get array of card component 
-     with all props 
+     with all props
  */
    const cards = getCardList(props.userTop);
    const firstCardInfo = getFirstCardInfo(props.userTop);
