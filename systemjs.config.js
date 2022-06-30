@@ -24,7 +24,10 @@ SystemJS.config({
     'systemjs-babel-build': 'systemjs-plugin-babel@latest/systemjs-babel-browser.js',
     'react': 'react@17/umd/react.production.min.js',
     'react-dom': 'react-dom@17/umd/react-dom.production.min.js',
-    'css': 'systemjs-plugin-css@latest/css.js'
+    'css': 'systemjs-plugin-css@latest/css.js',
+    "react-router":"react-router@6/umd/react-router.development.js",
+    'react-router-dom':"react-router-dom@6/umd/react-router-dom.development.js"
+
   },
   transpiler: 'plugin-babel'
 });

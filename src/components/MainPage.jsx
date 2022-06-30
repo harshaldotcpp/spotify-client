@@ -6,11 +6,12 @@ import  fetchAccessToken  from "../apiCalls/spotifyAuthontication.js"
 import { getRequestToSpotifyApi } from "../apiCalls/spotifyApi";
 import { UserTopRequestUrl } from "../urlClasses/topUserUrl.js";
 
+
 const USERTOP_URL = new UserTopRequestUrl();
 
-
-
 function MainPage(props){
+  
+  
 
 //get access acessToken from code
  let [access_token,refresh_token] = fetchAccessToken(props.code);
@@ -65,10 +66,12 @@ function MainPage(props){
         access_token={access_token} 
       / >
       
-      <Content 
+      <Content
+       code ={props.code}
         userTop={userTops} 
         setTopList={handleTypeChange}
       />
+      
       
     </div>
     :<div className="main-page-loading">

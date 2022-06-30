@@ -1,6 +1,6 @@
 import React from "react";
-import "./Card.css"
-
+import "./Card.css";
+import { Link } from "react-router-dom";
 
 function Card(props){
   
@@ -10,7 +10,11 @@ function Card(props){
       <img id="top-img" src={props.img} />
       <div className="info">
         <div>
-        <h4>{props.name}</h4>
+        <h4>
+          <Link  to="/index.html/cardexpand">
+            {props.name}
+          </Link>
+        </h4>
         <p4>{props.moreInfo}</p4>
         </div>
       </div>

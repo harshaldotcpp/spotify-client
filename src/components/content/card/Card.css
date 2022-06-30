@@ -24,7 +24,9 @@
   margin: 1rem;
 }
 
-.info h4{
+.info h4 a{
+  text-decoration: none;
+  color: white;
   font-size: .9rem;
 }
 
