@@ -1,14 +1,12 @@
 import React from "react";
 import './TopSection.css';
 
-
-
 function TopSection(props){
-
+  
   return(
     <div className="top-section">
         <div className="top-img">
-            <img id="top-img" src={props.img} alt="top artist" />
+            <img id="TOP-IMG" src={props.img} alt="top artist" />
         </div>
         <div className="top-info">
           <div>

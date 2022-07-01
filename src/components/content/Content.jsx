@@ -9,6 +9,7 @@ import "./Content.css";
 
 
 function Content(props){
+  
   //type-btn state
   let [btnState,setBtnState] = React.useState([{color:"green"},{},{}]);
   
@@ -20,6 +21,8 @@ function Content(props){
    const firstCardInfo = getFirstCardInfo(props.userTop);
 
   
+ 
+ 
   function handleOnClickTypeBtn(e){
     let obj = [{},{},{}];
     obj[parseInt(e.target.id.split("-")[1])] = {color:"green"};
@@ -31,30 +34,35 @@ function Content(props){
     props.setTopList(e.target.value);
   }
   
-  
+
   
   return(
-   <div id="content">
-   {/**********************************************************/}
-      <TopSection 
+  <div id="content">
+    <TopSection 
         img={firstCardInfo.img} 
         moreInfo={firstCardInfo.moreInfo} 
         name={firstCardInfo.name}
+    />
+  
+    <Routes >
+    
+      <Route path="/index.html" 
+        element={ 
+          <CardList btnState={btnState} 
+            handleOnClickTypeBtn={handleOnClickTypeBtn} 
+            cards={cards} 
+          /> 
+        }  
       />
-  {/* ********************************************************/}
-    
-      <div className="top-list-of">
-          <button style={btnState[0]} id="type-0" value="artists" onClick={handleOnClickTypeBtn} type="button">Artists</button>
-          <button style={btnState[1]} id="type-1" value="tracks" onClick={handleOnClickTypeBtn} type="button">Songs</button>
-          <button style={btnState[2]} id="type-2" value="Albums" type="button">Albums</button>
-      </div>
+        
+      <Route 
+        path="/index.html/cardexpand" 
+        element={
+          <CardExpand />
+        }
+      />
       
-
-      <Routes >
-        <Route path="/index.html" element={ <CardList cards={cards} /> }  />
-        <Route path="/index.html/cardexpand" element={<CardExpand />} />
-      </Routes>
-    
+    </Routes>
   </div>
      
   );

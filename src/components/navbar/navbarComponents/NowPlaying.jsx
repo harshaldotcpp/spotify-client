@@ -14,7 +14,8 @@ function NowPlaying(props){
     getRequestToSpotifyApi((data)=>{
       
       data = getNowPlayingInfo(data);
-      setNowplaying(data);
+      if(data)
+        setNowplaying(data);
       
     },NOW_PLAYING_URL,props.access_token);
   });

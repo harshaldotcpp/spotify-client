@@ -26,8 +26,8 @@ SystemJS.config({
     'react-dom': 'react-dom@17/umd/react-dom.production.min.js',
     'css': 'systemjs-plugin-css@latest/css.js',
     "react-router":"react-router@6/umd/react-router.development.js",
-    'react-router-dom':"react-router-dom@6/umd/react-router-dom.development.js"
-
+    'react-router-dom':"react-router-dom@6/umd/react-router-dom.development.js",
+    'fast-average-color':"fast-average-color/dist/index.browser.min.js"
   },
   transpiler: 'plugin-babel'
 });

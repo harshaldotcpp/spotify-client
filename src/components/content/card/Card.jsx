@@ -3,11 +3,10 @@ import "./Card.css";
 import { Link } from "react-router-dom";
 
 function Card(props){
-  
 
   return(
     <div style={props.style} id="top-card" >
-      <img id="top-img" src={props.img} />
+      <img  src={props.img} />
       <div className="info">
         <div>
         <h4>

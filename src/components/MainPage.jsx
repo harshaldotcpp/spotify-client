@@ -62,6 +62,7 @@ function MainPage(props){
     <div className="MainPage">
     
       <Navbar 
+        userTop={userTops}
         handleTimeChange={handleTimeRangeChange} 
         access_token={access_token} 
       / >
