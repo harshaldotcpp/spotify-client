@@ -1,9 +1,11 @@
 import React from "react";
+import Client from "../urlClasses/client.js";
 
 const TOKEN = "https://accounts.spotify.com/api/token";
 const CLIENT_ID = "a201e1c8ee7c4676886781255be2c68b";
 const CLIENT_SECRET = "43599d0109654011a6a3295b65f2eb1b";
 
+const  client = new Client();
 
 
 function getAccessToken(code){
@@ -21,12 +23,12 @@ function getAccessToken(code){
   
  function fetchAccessToken(code){
   //console.log(code)
-    if(!localStorage.getItem("refresh_token")){
+    if(!client.alreadyLoggedIn()){
       let body = "grant_type=authorization_code";
       body += "&code=" + code;
       body += "&redirect_uri=" + encodeURI("http://localhost:8158/index.html");
-      body += "&client_id="+CLIENT_ID;
-      body += "&client_secret=" + CLIENT_SECRET;
+      body += "&client_id="+ client.id;
+      body += "&client_secret=" + client.secret;
       callAuthorizationApi(body);
     }
     else{

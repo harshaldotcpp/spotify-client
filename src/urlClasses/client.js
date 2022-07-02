@@ -3,6 +3,9 @@ class Client{
   
   constructor(){
     this.token = localStorage.getItem("refresh_token");
+    this.id = "a201e1c8ee7c4676886781255be2c68b";
+    this.secret = "43599d0109654011a6a3295b65f2eb1b";
+
   }
   
   alreadyLoggedIn(){
@@ -15,19 +18,13 @@ class Client{
     return this.token;
   }
   
-  ifLogged(){
-    this.token = new URLSearchParams(window.location.search)
-    .get('code');
-    if(this.token)
-      return true;
-    return false;
-  }
   
   isLogged(){
-    if(this.alreadyLoggedIn()){
-       return true; //true
+    if(this.token){
+       return this.token; //true
     }
-    return ifLogged();
+    return  new URLSearchParams(window.location.search)
+    .get('code');
   }
   
 }

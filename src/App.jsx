@@ -8,12 +8,13 @@ import Client from "./urlClasses/client.js";
 
 
 const client = new Client;
+const isLogged = client.isLogged();
 
 function App() {
 
   return (
-    (client.isLogged())
-    ?<MainPage code={client.getToken()} />
+    (isLogged)
+    ?<MainPage code={isLogged} />
     :<Login />
   );
 }
