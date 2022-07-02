@@ -4,7 +4,8 @@
 /* helper function */
 const createCardCompoListForArtist = (userTop) => {
    return userTop.map((val)=>{
-      return <Card 
+      return <Card
+        id={val.id}
         img={val.images[0].url} 
         name={val.name} 
         moreInfo={val.genres[0]}
@@ -16,7 +17,8 @@ const createCardCompoListForArtist = (userTop) => {
 const createCardCompoListForTrack = (userTop) =>{
   
    return userTop.map((val)=>{
-       return <Card 
+       return <Card
+          id = {val.id}
           img={val.album.images[1].url}
           name={val.name}
           moreInfo={"by "+val.artists[0].name}

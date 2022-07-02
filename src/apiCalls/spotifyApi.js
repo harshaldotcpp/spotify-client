@@ -17,7 +17,7 @@ function fetchApi(doThis,SPOTIFY_API_URL,info,setUserTop){
     .then(response => response.json())
     .then(doThis)
     .catch((e)=>{
-       
+      
     });
 }
 

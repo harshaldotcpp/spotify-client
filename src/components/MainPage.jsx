@@ -10,12 +10,11 @@ import { UserTopRequestUrl } from "../urlClasses/topUserUrl.js";
 const USERTOP_URL = new UserTopRequestUrl();
 
 function MainPage(props){
-  
-  
+ 
 
 //get access acessToken from code
- let [access_token,refresh_token] = fetchAccessToken(props.code);
-  
+ let access_token = fetchAccessToken(props.code);
+
 
 /* 
   userTop data from api.spotify saved as

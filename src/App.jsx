@@ -3,16 +3,17 @@ import './App.css';
 import Login from './Login.jsx'
 import MainPage from "./components/MainPage.jsx"
 import getAccessToken from "./apiCalls/spotifyAuthontication.js";
+import Client from "./urlClasses/client.js";
 
 
-  let isCode = new URLSearchParams(window.location.search)
-  .get('code');
-  
+
+const client = new Client;
+
 function App() {
 
   return (
-    (isCode)
-    ?<MainPage code={isCode} />
+    (client.isLogged())
+    ?<MainPage code={client.getToken()} />
     :<Login />
   );
 }
