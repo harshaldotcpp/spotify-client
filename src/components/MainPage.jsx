@@ -12,7 +12,7 @@ const USERTOP_URL = new UserTopRequestUrl();
 function MainPage(props){
  
 
-//get access acessToken from code
+//get access acessToken from code async
  let access_token = fetchAccessToken(props.code);
 
 
