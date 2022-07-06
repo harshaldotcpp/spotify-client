@@ -39,7 +39,7 @@ function Navbar(props){
           <div className={`hambar ${hamburger[1]}`} >
           </div>
         </label>
-           <h1> <strong>something</strong> </h1>
+           <h1> <strong>idontknow</strong> </h1>
            <img sr="" alt=" " />
          </div> 
         

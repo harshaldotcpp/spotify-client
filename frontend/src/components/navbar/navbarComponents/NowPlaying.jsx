@@ -1,6 +1,6 @@
 import React from "react";
 import "./NowPlaying.css"
-import { getRequestToSpotifyApi } from "/src/apiCalls/spotifyApi.js"
+import { getRequestToSpotifyApi } from "static/apiCalls/spotifyApi.js"
 import { getNowPlayingInfo } from "./utility.js";
 
 const NOW_PLAYING_URL = "https://api.spotify.com/v1/me/player/currently-playing";

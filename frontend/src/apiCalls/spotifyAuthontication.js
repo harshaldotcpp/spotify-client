@@ -62,7 +62,7 @@ function getAccessToken(code){
   
     fetchAccessToken(code)
     .then((data)=>{
-      window.history.pushState({},null,"/index.html");
+      window.history.pushState({},null,"/");
       setAccessToken(data.access_token);
   
       if(data.refresh_token)

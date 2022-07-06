@@ -47,7 +47,7 @@ function Content(props){
   
     <Routes >
     
-      <Route path="/index.html" 
+      <Route path="/" 
         element={ 
           <CardList btnState={btnState} 
             handleOnClickTypeBtn={handleOnClickTypeBtn} 
@@ -57,7 +57,7 @@ function Content(props){
       />
         
       <Route 
-        path="/index.html/cardexpand" 
+        path="/cardexpand" 
         element={
           <CardExpand />
         }

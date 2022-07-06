@@ -10,7 +10,7 @@ function Card(props){
       <div className="info">
         <div>
         <h4>
-          <Link  to="/index.html/cardexpand">
+          <Link  to="/cardexpand">
             {props.name}
           </Link>
         </h4>

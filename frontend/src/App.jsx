@@ -9,8 +9,8 @@ import Client from "./urlClasses/client.js";
 
 const client = new Client;
 const isLogged = client.isLogged();
-
-function App() {
+ 
+function App(){
 
   return (
     (isLogged)
