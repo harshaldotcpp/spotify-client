@@ -6,7 +6,7 @@ const  client = new Client();
 
 
 async function fetchAccessToken(code){
-  //console.log(code)
+  
   if(!client.alreadyLoggedIn()){
     let body = "grant_type=authorization_code";
     body += "&code=" + code;
@@ -26,7 +26,7 @@ async function authorizationForAccessToken(body){
     /*
       post request for access_token
     */
-  const request ={
+  const request = {
     method:"POST",
     headers :{
       "content-type":"application/x-www-form-urlencoded",
@@ -47,13 +47,8 @@ async function authorizationForAccessToken(body){
 
 function getAccessToken(code){
 
-  
-  
  let [access_token,setAccessToken] = React.useState();
  let [expires_in,setExpireIn] = React.useState();
-  
-
-  
   
   React.useEffect(()=>{
   /* 
