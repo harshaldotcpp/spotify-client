@@ -3,23 +3,30 @@ import Client from "../urlClasses/client.js";
 
 const TOKEN = "https://accounts.spotify.com/api/token";
 const  client = new Client();
+const postUrl = {
+    grantType:  "grant_type=authorization_code",
+    code: "&code=",
+    reUrl: "&redirect_uri=" + encodeURI("http://localhost:8000"),
+    cliendId: "&client_id="+ client.id,
+    clientSecret: "&client_secret=" + client.secret,
+}
 
 
 async function fetchAccessToken(code){
   
   if(!client.alreadyLoggedIn()){
-    let body = "grant_type=authorization_code";
-    body += "&code=" + code;
-    body += "&redirect_uri=" + encodeURI("http://localhost:8000");
-    body += "&client_id="+ client.id;
-    body += "&client_secret=" + client.secret;
+    postUrl.code += code;
+    let body = Object.values(postUrl).reduce((acc,val)=>{
+        return acc += val;
+    },"");
+    
     return authorizationForAccessToken(body);
   }
-  else{
-    let body = "grant_type=refresh_token";
-    body += "&refresh_token=" + code;
-    return authorizationForAccessToken(body);
-  }
+ 
+  let body = "grant_type=refresh_token";
+  body += "&refresh_token=" + code;
+  return authorizationForAccessToken(body);
+ 
 }
 
 async function authorizationForAccessToken(body){
