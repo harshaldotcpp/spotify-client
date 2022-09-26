@@ -11,7 +11,7 @@ const reqInfo = {
 
 
 
-function fetchApi(doThis,SPOTIFY_API_URL,info,setUserTop){
+function fetchApi(doThis,SPOTIFY_API_URL,info){
   
     fetch(SPOTIFY_API_URL,info)
     .then(response => response.json())

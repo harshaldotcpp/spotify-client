@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./navbar/Navbar.jsx";
 import Content from "./content/Content.jsx";
 import "./MainPage.css";
-import  fetchAccessToken  from "../apiCalls/spotifyAuthontication.js"
+import  getAccessToken from "../apiCalls/spotifyAuthontication.js"
 import { getRequestToSpotifyApi } from "../apiCalls/spotifyApi";
 import { UserTopRequestUrl } from "../urlClasses/topUserUrl.js";
 
@@ -13,7 +13,7 @@ function MainPage(props){
  
 
 //get access acessToken from code async
- let access_token = fetchAccessToken(props.code);
+ let access_token = getAccessToken(props.code);
 
 
 /* 

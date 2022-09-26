@@ -21,10 +21,14 @@ class Client{
   
   isLogged(){
     if(this.token){
+        
        return this.token; //true
     }
-    return  new URLSearchParams(window.location.search)
+    console.log("hmm")
+    let code = new URLSearchParams(window.location.search)
     .get('code');
+    console.log(code);
+    return code;
   }
   
 }
