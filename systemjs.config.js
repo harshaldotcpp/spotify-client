@@ -25,8 +25,8 @@ SystemJS.config({
     'react': 'https://unpkg.com/react@17/umd/react.production.min.js',
     'react-dom': 'https://unpkg.com/react-dom@17/umd/react-dom.production.min.js',
     'css': 'https://unpkg.com/systemjs-plugin-css@latest/css.js',
-    "react-router":"https://unpkg.com/react-router@6/umd/react-router.development.js",
-    'react-router-dom':"https://unpkg.com/react-router-dom@6/umd/react-router-dom.development.js",
+  //  "react-router":"https://unpkg.com/react-router@6/umd/react-router.development.js",
+   // 'react-router-dom':"https://unpkg.com/react-router-dom@6/umd/react-router-dom.development.js",
     'fast-average-color':"https://unpkg.com/fast-average-color/dist/index.browser.min.js",
     "history": "https://unpkg.com/history"
   },

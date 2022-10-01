@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+// import { Route, Routes } from "react-router-dom";
 import Card from "./card/Card.jsx";
 import CardList from "./card/CardList.jsx";
 import TopSection from "./topsection/TopSection.jsx";
@@ -45,25 +45,13 @@ function Content(props){
         name={firstCardInfo.name}
     />
   
-    <Routes >
-    
-      <Route path="/" 
-        element={ 
+ 
           <CardList btnState={btnState} 
             handleOnClickTypeBtn={handleOnClickTypeBtn} 
             cards={cards} 
           /> 
-        }  
-      />
-        
-      <Route 
-        path="/cardexpand" 
-        element={
-          <CardExpand />
-        }
-      />
-      
-    </Routes>
+ 
+
   </div>
      
   );
